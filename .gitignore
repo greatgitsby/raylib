@@ -55,6 +55,8 @@ packages/
 *.so
 *.so.*
 *.dll
+*.h.pch
+./*.obj
 
 # Emscripten
 emsdk
@@ -81,6 +83,7 @@ DerivedData/
 
 # VSCode project
 .vscode
+.clangd
 
 # Jetbrains project
 .idea/
@@ -111,5 +114,12 @@ build/
 build-*/
 docgen_tmp/
 
-# Parser stuff
-parser/raylib_parser
+# Tools stuff
+tools/parser/rlparser.exe
+tools/parser/rlparser
+tools/rexm/rexm.exe
+tools/rexm/rexm
+
+# CI
+emsdk-cache/
+raylib.com/
