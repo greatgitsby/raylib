@@ -72,6 +72,8 @@
 #include <shellscalingapi.h>
 #include <versionhelpers.h>
 
+#include <malloc.h>          // Required for alloca()
+
 #if !defined(GRAPHICS_API_OPENGL_11_SOFTWARE)
     #include <GL/gl.h>
 #endif
@@ -195,8 +197,8 @@ static PFNWGLGETEXTENSIONSSTRINGARBPROC wglGetExtensionsStringARB = NULL;
 #define WGL_CONTEXT_PROFILE_MASK_ARB        0x9126
 #define WGL_CONTEXT_CORE_PROFILE_BIT_ARB    0x00000001
 #define WGL_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB 0x00000002
-#define WGL_CONTEXT_ES_PROFILE_BIT_EXT		0x00000004
-#define WGL_CONTEXT_ES2_PROFILE_BIT_EXT		0x00000004
+#define WGL_CONTEXT_ES_PROFILE_BIT_EXT        0x00000004
+#define WGL_CONTEXT_ES2_PROFILE_BIT_EXT        0x00000004
 
 //----------------------------------------------------------------------------------
 // Types and Structures Definition
